@@ -14,6 +14,7 @@ public class Task2 {
             return "Такой квартиры не существует";
         }
         //номер подъезда = номер кв / (этажи * 4), округляем в большую сторону
+        //добавил комментарий, чтоб можно было закомитить
         long entranseNumber = Math.round(Math.ceil((Double.valueOf(flatNumber) / (floorAmount * 4))));
         //номер этажа = номер кв - ((номер подъезда - 1) * 4 * количество этажей)/4, округляем в большую сторону
         long floorNumber = Math.round(Math.ceil(Double.valueOf(flatNumber - ((entranseNumber - 1) * 4 * floorAmount)) / 4));
